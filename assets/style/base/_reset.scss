@@ -1,0 +1,98 @@
+/**
+ * Created by Eunjin Yang on 2020. 12. 2.
+ * Github : http://github.com/jinnny
+ */
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+*, body {
+  font-family: $default-font;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  @media all and (max-width: 910px) {
+    font-size: 14px;
+  }
+  //@media all and (max-width: 600px) {
+  //  font-size: 12px;
+  //}
+  //@media all and (max-width: 450px) {
+  //  font-size: 10px;
+  //}
+}
+
+a,
+a:hover,
+a:focus,
+a:active,
+a:link {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+fieldset {
+  border: 0;
+}
+
+button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+}
+
+strong,
+b {
+  color: inherit;
+  font-size: inherit;
+}
+
+i,
+em {
+  font-style: normal;
+}
+
+mark {
+  color: inherit;
+  background: none;
+}
+
+button {
+  -webkit-appearance: none;
+}
+
+input {
+  -webkit-border-radius: 0;
+}
+
+input:matches([type="password"], [type="search"]),
+input[type=text],
+textarea {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+
+table {
+  border-collapse: collapse;
+}
