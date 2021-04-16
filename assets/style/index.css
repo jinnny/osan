@@ -854,7 +854,6 @@ img {
   position: fixed;
   width: 100%;
   transform: translateY(0%);
-  transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 1);
 }
 .main-section:before {
   content: "";
