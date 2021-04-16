@@ -112,7 +112,8 @@ $(function () {
 
   // popup
   $('.js-popup-toggle-button').on('click', function (){
-    $(this).parents('.popup').toggleClass('is--active')
+    console.log('tt')
+    $('.popup').toggleClass('is--active')
     if($('.popup').hasClass('is--active')) {
       $(this).find('.popup-toggle-text').text('CLOSE')
     }else {

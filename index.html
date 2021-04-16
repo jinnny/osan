@@ -79,53 +79,7 @@
     </nav>
   </div>
 </aside>
-<header class="header">
-  <h1 class="header-logo">
-    <a href="/" class="header-logo__link">오산엘리포레</a>
-  </h1>
-  <nav class="header-menu">
-    <ul class="header-menu-list">
-      <li class="header-menu__item">
-        <a href="/" class="header-menu__link">사업안내</a>
-      </li>
-      <li class="header-menu__item">
-        <a href="/" class="header-menu__link">브랜드소개</a>
-      </li>
-      <li class="header-menu__item">
-        <a href="/" class="header-menu__link">프리미엄</a>
-        <ul class="header-menu-depth">
-          <li class="header-menu-depth__item">
-            <a href="/" class="header-menu-depth__link">프리미엄</a>
-          </li>
-          <li class="header-menu-depth__item">
-            <a href="/" class="header-menu-depth__link">입지스케치/특화영상</a>
-          </li>
-        </ul>
-      </li>
-      <li class="header-menu__item">
-        <a href="/" class="header-menu__link">청약체크리스트</a>
-      </li>
-      <li class="header-menu__item">
-        <a href="/" class="header-menu__link">홍보센터</a>
-        <ul class="header-menu-depth">
-          <li class="header-menu-depth__item">
-            <a href="/" class="header-menu-depth__link">언론보도</a>
-          </li>
-          <li class="header-menu-depth__item">
-            <a href="/" class="header-menu-depth__link">더샵TV</a>
-          </li>
-          <li class="header-menu-depth__item">
-            <a href="/" class="header-menu-depth__link">카드뉴스</a>
-          </li>
-        </ul>
-      </li>
-      <li class="header-menu__item">
-        <a href="/" class="header-menu__link">관심고객등록</a>
-      </li>
-    </ul>
-  </nav>
-  <a href="tel:1577-0927" class="header-tel"></a>
-</header>
+<? include "menu.html"; ?>
 <main class="main">
   <div class="main-section-area">
     <div class="main-section main-section-visual">
@@ -133,15 +87,17 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide main-visual-swiper-slide main-visual-swiper-slide1">
             <div class="main-slide-bg"></div>
-            <div class="main-slide-text"></div>
+            <div class="main-slide-text">
+              <img src="assets/images/main/main-copyright-big.png" alt="오산의 가치 새롭게 다시쓰다" class="main-copyright">
+              <p class="main-slide-text--sub">오산이 기다린 브랜드</p>
+            </div>
           </div>
           <div class="swiper-slide main-visual-swiper-slide main-visual-swiper-slide2">
             <div class="main-slide-bg"></div>
-            <div class="main-slide-text"></div>
-          </div>
-          <div class="swiper-slide main-visual-swiper-slide main-visual-swiper-slide3">
-            <div class="main-slide-bg"></div>
-            <div class="main-slide-text"></div>
+            <div class="main-slide-text">
+              <img src="assets/images/main/main-copyright-big.png" alt="오산의 가치 새롭게 다시쓰다" class="main-copyright">
+              <p class="main-slide-text--sub">오산이 기다린 브랜드</p>
+            </div>
           </div>
         </div>
         <div class="main-visual-controller">
@@ -153,9 +109,9 @@
         </div>
       </div>
       <nav class="main-quick-menu">
-        <a href="" class="main-quick-menu__link"><img src="assets/images/main/icon-video.png" alt="" class="main-quick-menu__icon">홍보영상</a>
-        <a href="" class="main-quick-menu__link"><img src="assets/images/main/icon-reservation.png" alt="" class="main-quick-menu__icon">홍보관 방문예약</a>
-        <a href="" class="main-quick-menu__link"><img src="assets/images/main/icon-location.png" alt="" class="main-quick-menu__icon">오시는길</a>
+        <a href="video.html" class="main-quick-menu__link"><img src="assets/images/main/icon-video.png" alt="" class="main-quick-menu__icon">홍보영상</a>
+        <a href="reservation.html" class="main-quick-menu__link"><img src="assets/images/main/icon-reservation.png" alt="" class="main-quick-menu__icon">홍보관 방문예약</a>
+        <a href="location.html" class="main-quick-menu__link"><img src="assets/images/main/icon-location.png" alt="" class="main-quick-menu__icon">오시는길</a>
       </nav>
       <div class="section-mouse">
         <img src="assets/images/main/main-mouse.png" alt="">
@@ -163,41 +119,73 @@
     </div>
     <div class="main-section main-section-premium">
       <div class="main-section-content main-section-content-premium">
-        <div class="swiper-container premium-swiper-container">
+        <div class="swiper-container premium-swiper-container zoom">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="premium-slide-img-area">
                 <img src="assets/images/main/premium-img1.png" alt="">
                 <div class="premium-slide-img-text">
-                  <strong><b>01.</b> PREMIUM LOCATION</strong>
+                  <strong><b>01.</b> BRAND PREMIUM</strong>
                 </div>
               </div>
               <div class="premium-slide-text-area">
-                <h1 class="premium-slide__title">PREMIUM5</h1>
+                <h1 class="premium-slide__title">PREMIUM4</h1>
                 <p class="premium-slide-text">
-                  <b>입지의 本</b>
-                  오션 IC, 오산역 등 편리한 광역교통<br>
-                  오산, 동탄신도시의 듀얼 생활권
+                  <b>브랜드 프리미엄</b>
+                  지역 내 1등 브랜드 파워,<br> 검증된 가치
                 </p>
                 <img src="assets/images/main/premium-img1-text.png" alt="LOCATION" class="premium-img-text">
-                <a href="location.html" class="premium__link"></a>
+                <a href="brand.html" class="premium__link"></a>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="premium-slide-img-area">
                 <img src="assets/images/main/premium-img2.png" alt="">
                 <div class="premium-slide-img-text">
-                  <strong><b>01.</b> PREMIUM LOCATION</strong>
+                  <strong><b>02.</b> LIFE LOCATION</strong>
                 </div>
               </div>
               <div class="premium-slide-text-area">
-                <h1 class="premium-slide__title">PREMIUM5</h1>
+                <h1 class="premium-slide__title">PREMIUM4</h1>
                 <p class="premium-slide-text">
-                  <b>입지의 本</b>
-                  오션 IC, 오산역 등 편리한 광역교통<br>
-                  오산, 동탄신도시의 듀얼 생활권
+                  <b>푸른 숲세권</b>
+                  대규모 근린공원(예정), 생태하천 등<br> 풍부한 자연녹지환경
                 </p>
                 <img src="assets/images/main/premium-img2-text.png" alt="LOCATION" class="premium-img-text">
+                <a href="location.html" class="premium__link"></a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="premium-slide-img-area">
+                <img src="assets/images/main/premium-img3.png" alt="">
+                <div class="premium-slide-img-text">
+                  <strong><b>03.</b> FUTURE LOCATION</strong>
+                </div>
+              </div>
+              <div class="premium-slide-text-area">
+                <h1 class="premium-slide__title">PREMIUM4</h1>
+                <p class="premium-slide-text">
+                  <b>빛나는 미래가치</b>
+                  新주거벨트축, 세교지구로 확장되는<br> 편리한 생활환경
+                </p>
+                <img src="assets/images/main/premium-img3-text.png" alt="LOCATION" class="premium-img-text">
+                <a href="location.html" class="premium__link"></a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="premium-slide-img-area">
+                <img src="assets/images/main/premium-img4.png" alt="">
+                <div class="premium-slide-img-text">
+                  <strong><b>04.</b> LIFE LOCATION</strong>
+                </div>
+              </div>
+              <div class="premium-slide-text-area">
+                <h1 class="premium-slide__title">PREMIUM4</h1>
+                <p class="premium-slide-text">
+                  <b>초특급 교통망</b>
+                  동탄도시철도(안), 분당선 연장계획(안) 등<br> 교통망 확충 추진 중
+                </p>
+                <img src="assets/images/main/premium-img4-text.png" alt="LOCATION" class="premium-img-text">
                 <a href="location.html" class="premium__link"></a>
               </div>
             </div>
@@ -214,7 +202,7 @@
     </div>
     <div class="main-section main-section-brand">
       <div class="main-section-content main-section-content-brand">
-        <div class="brand-text-area">
+        <div class="brand-text-area fade">
           <p class="brand-text brand-text--main">
             보이는 것을<br>
             잘 하는 브랜드는<br>
@@ -233,9 +221,11 @@
             변함없이 견고하게 빛나야 하기 때문입니다<br>
           </p>
         </div>
-        <div class="brand-video-area">
+        <div class="brand-video-area fade fade--delay">
           <img src="assets/images/main/brand-logo.png" alt="" class="brand-logo">
-          <div class="brand-video"></div>
+          <div class="brand-video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/vcazdao58as?rel=0&controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
           <p class="brand-video__subject">PREMIUM BRAND THE SHARP</p>
         </div>
       </div>

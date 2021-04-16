@@ -37,18 +37,19 @@ var _init = function() {
     return array;
   }
 
-  TweenMax.set([$(".sub-top-copyright"), $subTitle], {autoAlpha:0, y:30});
+  TweenMax.set([$(".sub-top-copyright")], {autoAlpha:0, y:30});
 
   var titm = new TimelineMax({pause:true});
   titm.from($ele, 2.5, {autoAlpha:1, "backgroundPositionY":100, ease:Power2.easeOut}, "bg")
     .to($(".sub-top-copyright"), 1.5, {autoAlpha:1, y:0, ease:Power2.easeOut}, "-=2")
   // titm.from($subTitle, 1, {autoAlpha:1, ease:Power2.easeOut})
   //   .to($subTitleLine, 1.5, {autoAlpha:1, y:0, ease:Power2.easeOut}, "-=2")
-  titm.staggerTo($subTitle, 1, { autoAlpha: 1, ease: Cubic.easeOut }, 0.2)
-  titm.staggerTo($subTitleLine, .5, { autoAlpha: 1, ease: Cubic.easeOut }, 0.2)
+  // titm.staggerTo($subTitle, 1, { autoAlpha: 1, ease: Cubic.easeOut }, 0.2)
+  // titm.staggerTo($subTitleLine, .5, { autoAlpha: 1, ease: Cubic.easeOut }, 0.2)
   titm.play();
 
 }
 $(function () {
   _init()
+  $('.sub-content__title').addClass('is--active')
 })
