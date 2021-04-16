@@ -1,0 +1,51 @@
+//common (서브,메인 공통요소)
+//input::-webkit-input-placeholder { color: $lPoint; }
+//input::-moz-placeholder { color: $lPoint; }
+//input:-ms-input-placeholder { color: $lPoint; }
+//input:-moz-placeholder { color: $lPoint; }
+//input::placeholder { color: $lPoint; }
+//::-webkit-scrollbar {
+//  width: 10px;
+//  height: 10px;
+//}
+//::-webkit-scrollbar-thumb {
+//  background: #d8d8d8;
+//}
+html {
+  -webkit-font-smoothing: antialiased;
+}
+.layout {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  @include clearfix();
+  &.is--content-center {
+    text-align: center;
+  }
+  @include respond-to(1200) {
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    box-sizing: border-box;
+  }
+  @include respond-to() {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.is--mobile {
+  @include respond-to(991, 'min-width') {
+    display: none !important;
+  }
+}
+.is--pc {
+  @include respond-to() {
+    display: none !important;
+  }
+}
+
