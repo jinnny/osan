@@ -212,11 +212,33 @@ table {
   top: 33px;
 }
 .header-menu {
-  padding-top: 14px;
   text-align: center;
+  position: fixed;
+  height: 100%;
+  left: -80%;
+  width: 80%;
+  max-width: 500px;
+  top: 0;
+  -webkit-transition: all 1s ease .1s;
+  -moz-transition: all 1s ease .1s;
+  -o-transition: all 1s ease .1s;
+  transition: all 1s ease .1s;
+}
+.header-menu:before {
+  content: '';
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+  display: none;
+  z-index: 1;
 }
 .header-menu-list {
   display: flex;
+  flex-direction: column;
 }
 .header-menu__item {
   padding: 0 2vw;
@@ -227,9 +249,9 @@ table {
   padding: 0;
 }
 .header-menu .header-menu__link {
-  font-size: 20px;
+  font-size: 17px;
   letter-spacing: -0.4px;
-  color: #ffffff;
+  color: #262626;
   box-sizing: border-box;
   position: relative;
 }
@@ -261,6 +283,16 @@ table {
 .header-menu .header-menu-depth__link:hover {
   font-weight: 600;
 }
+.header-menu-menu {
+  background: #ffffff;
+  position: relative;
+  z-index: 3;
+  text-align: left;
+  height: 100%;
+}
+.header-menu-menu .header-menu-header {
+  padding: 2rem;
+}
 .header-tel {
   margin-top: 14px;
   width: 157px;
@@ -268,23 +300,23 @@ table {
   background-repeat: no-repeat;
   background-image: url("../images/common/header-tel.png");
 }
-.header:hover, .header.is--active {
+.header.is--active {
   background: #ffffff;
   height: 245px;
 }
-.header:hover .header-logo, .header.is--active .header-logo {
+.header.is--active .header-logo {
   background-image: url("../images/common/logo-blue.png");
 }
-.header:hover .header-menu__link, .header.is--active .header-menu__link {
+.header.is--active .header-menu__link {
   color: #273d6c;
 }
-.header:hover .header-menu__item:hover .header-menu__link:after, .header.is--active .header-menu__item:hover .header-menu__link:after {
+.header.is--active .header-menu__item:hover .header-menu__link:after {
   width: 100%;
 }
-.header:hover .header-tel, .header.is--active .header-tel {
+.header.is--active .header-tel {
   background-image: url("../images/common/header-tel-blue.png");
 }
-.header:hover .header-menu-depth, .header.is--active .header-menu-depth {
+.header.is--active .header-menu-depth {
   display: block;
 }
 .header.is--blue {

@@ -499,6 +499,9 @@ img {
   -webkit-transition: margin 2s;
   transition: margin 2s;
 }
+.main-section-area.show--footer {
+  margin-top: -216px;
+}
 
 .main-section:before {
   position: absolute;

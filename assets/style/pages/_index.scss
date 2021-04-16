@@ -13,6 +13,9 @@ $slide-number: 3;
   margin-top: 0;
   -webkit-transition: margin 2s;
   transition: margin 2s;
+  &.show--footer {
+    margin-top: -216px;
+  }
 }
 
 .main-section {
