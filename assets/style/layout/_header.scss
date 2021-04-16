@@ -7,7 +7,8 @@
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  transition: height .2s;
+  transition: height .2s, background-color .2s;
+  background-color: transparent;
   &-logo {
     width: 158px;
     height: 53px;
