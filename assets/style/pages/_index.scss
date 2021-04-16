@@ -460,14 +460,15 @@ $slide-number: 3;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  background-color: $white;
   overflow: hidden;
   will-change: transform;
-  //backface-visibility: hidden;
+  backface-visibility: hidden;
   height: 100vh + $parallax-offset;
   position: fixed;
   width: 100%;
-  transform: translateY(100%);
-  //@include transition($transition-speed, all, cubic-bezier(0.22, 0.44, 0, 1));
+  transform: translateY(0%);
+  @include transition($transition-speed, all, cubic-bezier(0.22, 0.44, 0, 1));
   &:before {
     content: "";
     position: absolute;
@@ -498,7 +499,7 @@ $slide-number: 3;
     transform: translateY($parallax-offset / 2);
   }
   + .main-section {
-    //transform: translate3d(0,$parallax-offset,0);
+    transform: translate3d(0,$parallax-offset,0);
     .content-wrapper {
       transform: translateY($parallax-offset);
     }

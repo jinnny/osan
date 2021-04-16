@@ -26,7 +26,8 @@ function parallaxScroll(evt) {
       ticking = true;
       if (currentSlideNumber !== totalSlideNumber - 1) {
         currentSlideNumber++;
-        nextItem();
+        //스크롤을내릴때
+        downItem();
       }
       slideDurationTimeout(slideDurationSetting);
     }
@@ -36,7 +37,7 @@ function parallaxScroll(evt) {
       if (currentSlideNumber !== 0) {
         currentSlideNumber--;
       }
-      previousItem();
+      upItem();
       slideDurationTimeout(slideDurationSetting);
     }
   }
@@ -54,60 +55,17 @@ var mousewheelEvent = isFirefox ? "DOMMouseScroll" : "wheel";
 window.addEventListener(mousewheelEvent, _.throttle(parallaxScroll, 60), false);
 
 // ------------- SLIDE MOTION ------------- //
-function nextItem() {
-
+function downItem() {
   var $previousSlide = $(".main-section").eq(currentSlideNumber - 1);
   var $currentSlide = $(".main-section").eq(currentSlideNumber);
-  $currentSlide.addClass('animated').css({
-    'transform' : 'translateY(0%)',
-    'z-index' : '5'
-  })
-  // $previousSlide.removeClass("up-scroll")
-  $currentSlide.on('transitionend',function(e){
-    // $previousSlide.addClass("down-scroll");
-    $previousSlide.css({'z-index': 0})
-    $(".main-section").removeClass('animated')
-    if(currentSlideNumber > 0) {
-      $('.header').addClass('is--blue')
-    }else {
-      $('.header').removeClass('is--blue')
-    }
-    // if(count > 1) return false;
-    // section.removeClass('animated')
-    // section.eq(currentIdx - 1).css('z-index','8');
-    //
-    // for(let i = currentIdx; i <= section.length; i++) {
-    //   section.eq(i).css({
-    //     'transform' : 'translateY(100%)',
-    //     'z-index' : ''
-    //   });
-    // }
-  })
+  //up scroll class가 붙으면 모두 제자리에 있음 (y값 0)
+  //downscroll이 붙으면 위로 이동(y값 -100vh)
+  $previousSlide.removeClass("up-scroll").addClass("down-scroll");
 }
 
-function previousItem() {
-  var $nextSlide = $(".main-section").eq(currentSlideNumber + 1);
+function upItem() {
   var $currentSlide = $(".main-section").eq(currentSlideNumber);
-  // next가 아래로 가야하고, current가 위로 가야함
-  console.log($nextSlide, $currentSlide)
-  $currentSlide.addClass('animated').css({
-    'transform' : 'translateY(0%)',
-    'z-index' : '5'
-  })
-  // $currentSlide.removeClass("down-scroll")
-  $currentSlide.on('transitionend',function(e){
-    // $currentSlide.addClass("up-scroll");
-    // $nextSlide.css({'z-index': 0})
-    $nextSlide.addClass('animated').css({
-      'transform' : 'translateY(-100%)',
-      'z-index' : ''
-    })
-    if(currentSlideNumber > 0) {
-      $('.header').addClass('is--blue')
-    }else {
-      $('.header').removeClass('is--blue')
-    }
-  })
+  $currentSlide.removeClass("down-scroll").addClass("up-scroll");
 }
 
 
