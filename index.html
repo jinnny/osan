@@ -21,21 +21,32 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
   <script src="assets/js/vendors/jquery.min.js"></script>
   <link rel="stylesheet" href="assets/style/index.css">
-  <script src="assets/js/vendors/aos.js"></script>
+<!--  <script src="assets/js/vendors/aos.js"></script>-->
   <script src="assets/js/vendors/jquery-ui.js"></script>
   <script src="assets/js/vendors/swiper.min.js"></script>
   <script src="assets/js/vendors/lodash.min.js"></script>
   <script src="assets/js/main.org.js"></script>
 </head>
 <body>
+<aside class="popup--type">
+  <div class="popup--type-content-area">
+    <!--  <div class="popup&#45;&#45;type-content">-->
+    <!--    <a href=""><img src="assets/images/main/popup-img1.png" alt=""></a>-->
+    <!--  </div>-->
+    <div class="popup--type-content">
+      <img src="assets/images/main/popup-img2.png" alt="">
+    </div>
+    <button class="popup--type-close">닫기 <img src="assets/images/main/popup-type-close.png" alt=""></button>
+  </div>
+</aside>
 <aside class="popup">
   <header class="popup-header">
     <h1 class="popup-header__logo">
       <img src="assets/images/main/popup-logo.png" alt="">
     </h1>
     <div class="popup-side">
-      <a href="" class="popup-side__item"><img src="assets/images/main/popup-channel.png" alt=""></a>
-      <a href="" class="popup-side__item"><img src="assets/images/main/popup-talk.png" alt=""></a>
+      <a href="http://pf.kakao.com/_xmRGIs" target="_blank" class="popup-side__item"><img src="assets/images/main/popup-channel.png" alt=""></a>
+      <a href="https://pf.kakao.com/_xmRGIs/chat" target="_blank" class="popup-side__item"><img src="assets/images/main/popup-talk.png" alt=""></a>
     </div>
     <button class="popup-toggle-button js-popup-toggle-button">
       <span class="popup-toggle-text">OPEN</span>
@@ -53,33 +64,34 @@
       </header>
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img src="assets/images/main/popup-img.png" alt="">
+          <a href="customer.html">
+            <img src="assets/images/main/popup-img1.png" alt="">
+          </a>
         </div>
         <div class="swiper-slide">
-          <img src="assets/images/main/popup-img.png" alt="">
-        </div>
-        <div class="swiper-slide">
-          <img src="assets/images/main/popup-img.png" alt="">
+          <img src="assets/images/main/popup-img2.png" alt="">
         </div>
       </div>
     </div>
     <nav class="popup-quick-menu">
-      <a href="" class="popup-quick-menu__item">
+      <a href="customer.html" class="popup-quick-menu__item">
         <img src="assets/images/main/popup-quick-icon1.png" alt="" class="popup-quick-menu__img">
         <span class="popup-quick-menu__text">관심고객<br/>등록하기</span>
       </a>
-      <a href="" class="popup-quick-menu__item">
+      <a href="javascript:alert('준비중입니다.');" class="popup-quick-menu__item">
         <img src="assets/images/main/popup-quick-icon2.png" alt="" class="popup-quick-menu__img">
         <span class="popup-quick-menu__text">카드뉴스</span>
       </a>
-      <a href="" class="popup-quick-menu__item">
+      <a href="javascript:alert('준비중입니다.');" class="popup-quick-menu__item">
         <img src="assets/images/main/popup-quick-icon3.png" alt="" class="popup-quick-menu__img">
         <span class="popup-quick-menu__text">청약 안내</span>
       </a>
     </nav>
   </div>
 </aside>
-<? include "menu.html"; ?>
+<div class="popup-layer"></div>
+
+<? include "header.html"; ?>
 <main class="main">
   <div class="main-section-area">
     <div class="main-section main-section-visual">
@@ -109,8 +121,8 @@
         </div>
       </div>
       <nav class="main-quick-menu">
-        <a href="video.html" class="main-quick-menu__link"><img src="assets/images/main/icon-video.png" alt="" class="main-quick-menu__icon">홍보영상</a>
-        <a href="reservation.html" class="main-quick-menu__link"><img src="assets/images/main/icon-reservation.png" alt="" class="main-quick-menu__icon">홍보관 방문예약</a>
+        <a href="javascript:alert('준비중입니다.');" class="main-quick-menu__link"><img src="assets/images/main/icon-video.png" alt="" class="main-quick-menu__icon">홍보영상</a>
+        <a href="javascript:alert('준비중입니다.');" class="main-quick-menu__link"><img src="assets/images/main/icon-reservation.png" alt="" class="main-quick-menu__icon">청약안내</a>
         <a href="location.html" class="main-quick-menu__link"><img src="assets/images/main/icon-location.png" alt="" class="main-quick-menu__icon">오시는길</a>
       </nav>
       <div class="section-mouse">
@@ -125,7 +137,7 @@
               <div class="premium-slide-img-area">
                 <img src="assets/images/main/premium-img1.png" alt="">
                 <div class="premium-slide-img-text">
-                  <strong><b>01.</b> BRAND PREMIUM</strong>
+                  <img src="assets/images/main/premium-text1.png" alt="">
                 </div>
               </div>
               <div class="premium-slide-text-area">
@@ -135,14 +147,14 @@
                   지역 내 1등 브랜드 파워,<br> 검증된 가치
                 </p>
                 <img src="assets/images/main/premium-img1-text.png" alt="LOCATION" class="premium-img-text">
-                <a href="brand.html" class="premium__link"></a>
+                <a href="premium.html" class="premium__link"></a>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="premium-slide-img-area">
                 <img src="assets/images/main/premium-img2.png" alt="">
                 <div class="premium-slide-img-text">
-                  <strong><b>02.</b> LIFE LOCATION</strong>
+                  <img src="assets/images/main/premium-text2.png" alt="">
                 </div>
               </div>
               <div class="premium-slide-text-area">
@@ -152,14 +164,14 @@
                   대규모 근린공원(예정), 생태하천 등<br> 풍부한 자연녹지환경
                 </p>
                 <img src="assets/images/main/premium-img2-text.png" alt="LOCATION" class="premium-img-text">
-                <a href="location.html" class="premium__link"></a>
+                <a href="premium.html" class="premium__link"></a>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="premium-slide-img-area">
                 <img src="assets/images/main/premium-img3.png" alt="">
                 <div class="premium-slide-img-text">
-                  <strong><b>03.</b> FUTURE LOCATION</strong>
+                  <img src="assets/images/main/premium-text3.png" alt="">
                 </div>
               </div>
               <div class="premium-slide-text-area">
@@ -169,14 +181,14 @@
                   新주거벨트축, 세교지구로 확장되는<br> 편리한 생활환경
                 </p>
                 <img src="assets/images/main/premium-img3-text.png" alt="LOCATION" class="premium-img-text">
-                <a href="location.html" class="premium__link"></a>
+                <a href="premium.html" class="premium__link"></a>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="premium-slide-img-area">
                 <img src="assets/images/main/premium-img4.png" alt="">
                 <div class="premium-slide-img-text">
-                  <strong><b>04.</b> LIFE LOCATION</strong>
+                  <img src="assets/images/main/premium-text4.png" alt="">
                 </div>
               </div>
               <div class="premium-slide-text-area">
@@ -186,7 +198,7 @@
                   동탄도시철도(안), 분당선 연장계획(안) 등<br> 교통망 확충 추진 중
                 </p>
                 <img src="assets/images/main/premium-img4-text.png" alt="LOCATION" class="premium-img-text">
-                <a href="location.html" class="premium__link"></a>
+                <a href="premium.html" class="premium__link"></a>
               </div>
             </div>
           </div>
@@ -235,13 +247,6 @@
     </div>
   </div>
 </main>
-<footer class="footer">
-  <img src="assets/images/common/footer-logo.png" alt="포스코건설">
-  <div class="footer-text">
-    <p class="footer-text__item">(주)포스코건설<span class="footer-separator">|</span>대표자 : 한성희<span class="footer-separator">|</span>주소 : 경상북도 포항시 남구 대송로 180<span class="footer-separator">|</span>사업자등록번호 : 506-81-02280</p>
-    <p class="footer-text__item">시행사:주식회사 서동개발<span class="footer-separator">|</span>시공사 : 주식회사 포스코건설</p>
-    <p class="footer-text__item footer-text__item-copyright">© 2021 Posco Engineering Construction Co., LTD. All Rights Reserved</p>
-  </div>
-</footer>
+<? include "footer.html"; ?>
 </body>
 </html>

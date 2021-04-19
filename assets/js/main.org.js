@@ -177,6 +177,16 @@ $(function () {
   new Swiper('.premium-swiper-container', {
     nextButton: '.swiper-button-next',
     prevButton: '.swiper-button-prev',
-    slidesPerView: 1.15
+    slidesPerView: 1.15,
+    loop: true
   });
+
+  $('.popup').addClass('is--active')
+  $('.popup-toggle-text').text('CLOSE')
+  $('.popup--type , .popup-layer').addClass('is--active')
+
+  $('.popup--type-close').on('click', function () {
+    $(this).parents('.popup--type').removeClass('is--active')
+    $('.popup-layer').removeClass('is--active')
+  })
 })

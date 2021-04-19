@@ -21,8 +21,8 @@ var _init = function() {
   tl.staggerFrom(icons, .8, { autoAlpha: 0, y: 100, ease: Cubic.easeOut }, 0.15)
   tl.from($bg, 2.5, { autoAlpha: 0, scale: 1.12, skewX: 0.001, ease: Power2.easeOut }, "-=2.9")
   tl.from($title, 2, { autoAlpha: 0, y: 100, ease: Power2.easeOut }, "-=1.6")
-  tl.to($ele, 1.2, { height: 670, ease: Power2.easeOut }, "-=1.2")
-  tl.staggerTo($menu, .8, { autoAlpha: 1, ease: Cubic.easeOut }, 0.2)
+  tl.to($ele, 1.2, { height: 450, ease: Power2.easeOut }, "-=1.2")
+  tl.staggerTo($menu, .2, { autoAlpha: 1, ease: Cubic.easeOut })
   // tl.staggerFrom($menu, .8, { autoAlpha: 0, y: 100, ease: Cubic.easeOut }, 0.15)
   tl.play();
   tl.timeScale(1.5);
@@ -37,18 +37,25 @@ var _init = function() {
     return array;
   }
 
-  TweenMax.set([$(".sub-top-copyright"), $subTitle], {autoAlpha:0, y:30});
+  TweenMax.set([$(".sub-top-copyright")], {autoAlpha:0, y:30});
 
   var titm = new TimelineMax({pause:true});
   titm.from($ele, 2.5, {autoAlpha:1, "backgroundPositionY":100, ease:Power2.easeOut}, "bg")
     .to($(".sub-top-copyright"), 1.5, {autoAlpha:1, y:0, ease:Power2.easeOut}, "-=2")
-  // titm.from($subTitle, 1, {autoAlpha:1, ease:Power2.easeOut})
-  //   .to($subTitleLine, 1.5, {autoAlpha:1, y:0, ease:Power2.easeOut}, "-=2")
-  titm.staggerTo($subTitle, 1, { autoAlpha: 1, ease: Cubic.easeOut }, 0.2)
-  titm.staggerTo($subTitleLine, .5, { autoAlpha: 1, ease: Cubic.easeOut }, 0.2)
   titm.play();
 
 }
 $(function () {
   _init()
+  $('.sub-content__title').addClass('is--active')
+  $('.sub-content__img').addClass('is--active')
+  $(window).scroll(function (){
+    var scroll = $(document).scrollTop();
+    if (scroll > 0) {
+      $('.js-header').addClass('is--blue')
+    }else {
+      $('.js-header').removeClass('is--blue')
+    }
+  })
+
 })

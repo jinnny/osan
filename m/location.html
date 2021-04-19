@@ -8,7 +8,7 @@
   <meta name="msapplication-navbutton-color" content="#000000">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="icon" type="image/png" href="assets/images/common/logo.png">
-  <meta id="meta_og_image" property="og:image" content="assets/images/common/logo.png">
+  <meta id="meta_og_image" property="og:image" content="assets/images/common/link_logo.jpg">
   <meta property="og:image:width" content="800">
   <meta property="og:image:height" content="627">
   <meta name="keywords" content="오산엘리포레 | 오시는길">
@@ -20,13 +20,15 @@
   <meta property="og:description" content="오산엘리포레 | 오시는길">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
   <script src="assets/js/vendors/jquery.min.js"></script>
-  <link rel="stylesheet" href="assets/style/index.css">
-<!--  <script src="assets/js/vendors/aos.js"></script>-->
+  <link rel="stylesheet" href="assets/style/style.css">
+  <script src="assets/js/vendors/aos.js"></script>
   <script src="assets/js/vendors/jquery-ui.js"></script>
   <script src="assets/js/vendors/swiper.min.js"></script>
   <script src="assets/js/vendors/TweenMax.min.js"></script>
   <script src="assets/js/vendors/SplitText.js"></script>
+  <script src="assets/js/vendors/jquery.rwdImageMaps.min.js"></script>
   <script src="assets/js/sub.js"></script>
+  <script src="assets/js/common.js"></script>
 </head>
 <body>
 <? include "header.html"; ?>
@@ -36,15 +38,9 @@
       <div class="sub-top-copyright">
         <img src="assets/images/common/main-copyright.png" alt="">
       </div>
-      <div class="sub-top__title-line"></div>
       <h1 class="sub-top__title">오시는길</h1>
     </header>
     <div class="sub-top-bg"></div>
-    <nav class="main-quick-menu">
-      <a href="video.html" class="main-quick-menu__link"><img src="assets/images/main/icon-video.png" alt="" class="main-quick-menu__icon">홍보영상</a>
-      <a href="reservation.html" class="main-quick-menu__link"><img src="assets/images/main/icon-reservation.png" alt="" class="main-quick-menu__icon">홍보관 방문예약</a>
-      <a href="location.html" class="main-quick-menu__link"><img src="assets/images/main/icon-location.png" alt="" class="main-quick-menu__icon">오시는길</a>
-    </nav>
     <nav class="sub-top-menu">
       <a href="summary.html" class="sub-top-menu__item">사업개요</a>
       <a href="location.html" class="sub-top-menu__item is--active">오시는길</a>
@@ -56,10 +52,20 @@
       <span class="sub-content-title-line"></span>
     </h2>
     <div class="sub-content-content">
-      <img src="assets/images/sub/location.jpg" alt="" class="sub-content__img">
+      <img src="assets/images/sub/location.jpg" alt="" class="sub-content__img" usemap="#image-map">
+		<map name="image-map">
+			<area shape="rect" coords="172,764,547,824" href="http://naver.me/5eGYvF63" alt="네이버지도바로가기" target="_blank">
+			<area shape="rect" coords="172,843,547,899" href="http://kko.to/52hHQ5wYT" alt="카카오맵바로가기" target="_blank">
+			<area shape="rect" coords="418,977,651,1028" href="tel:1600-5400" alt="tel:1600-5400">
+		</map>
     </div>
   </div>
 </main>
 <? include "footer.html"; ?>
 </body>
 </html>
+<script>
+$(document).ready(function(e) {
+	$('img[usemap]').rwdImageMaps();
+});
+</script>
